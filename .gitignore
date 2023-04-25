@@ -1,0 +1,5 @@
+pyproject.toml
+bitget_python_connector.egg-info
+dist
+tests
+env.py
