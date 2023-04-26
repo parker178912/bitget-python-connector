@@ -11,28 +11,28 @@ class PublicApi(Client):
 
     def times(self):
         '''
-        Get Timestamp
+        ### Get Timestamp
         :return:
         '''
         return self._request_without_params(GET, SPOT_PUBLIC_V1_URL + '/time')
 
     def currencies(self):
         '''
-        Get all currencies
+        ### Get all currencies
         :return:
         '''
         return self._request_without_params(GET, SPOT_PUBLIC_V1_URL + '/currencies')
 
     def products(self):
         '''
-        Get all transaction pair information
+        ### Get all transaction pair information
         :return:
         '''
         return self._request_without_params(GET, SPOT_PUBLIC_V1_URL+'/products')
 
     def product(self, symbol):
         '''
-        Obtain single currency pair information according to the transaction pair
+        ### Obtain single currency pair information according to the transaction pair
         :return:
         '''
         params = {}

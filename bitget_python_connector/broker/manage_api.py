@@ -9,7 +9,7 @@ class ManageApi(Client):
 
     def sub_create_api(self, subUid, passphrase, remark, ip, perm):
         '''
-        broker create sub apikey
+        ### broker create sub apikey
         :return:
         '''
         params = {}
@@ -25,7 +25,7 @@ class ManageApi(Client):
 
     def sub_list(self, subUid):
         '''
-        get sub apikey list
+        ### get sub apikey list
         :return:
         '''
         params = {}
@@ -37,7 +37,7 @@ class ManageApi(Client):
 
     def sub_modify_api(self, subUid, apikey, remark, ip, perm):
         '''
-        broker modify sub apikey
+        ### broker modify sub apikey
         :return:
         '''
         params = {}

@@ -11,7 +11,7 @@ class WalletApi(Client):
 
     def transfer(self, fromType, toType, amount, coin):
         '''
-        inner transfer 
+        ### Inner transfer 
         fromType： spot, mix_usdt, mix_usd
         toType: spot, mix_usdt, mix_usd
         amount: transfer amount
@@ -30,7 +30,7 @@ class WalletApi(Client):
 
     def depositAddress(self, coin, chain):
         '''
-        GET deposit address
+        ### GET deposit address
         coin： btc usdt
         chain: trc20  erc20
         :return:
@@ -45,7 +45,7 @@ class WalletApi(Client):
 
     def withdrawal(self, coin, address, chain, amount, remark, clientOid=None,tag=None):
         '''
-        withdrawal
+        ### Withdrawal
         coin： btc usdt
         address: withdrawal address
         tag: exit? 
@@ -74,7 +74,7 @@ class WalletApi(Client):
 
     def withdrawalInner(self, coin, toUid, amount, clientOid):
         '''
-        withdrawalInner
+        ### WithdrawalInner
         coin： btc usdt
         toUid: 
         amount: withdrawal amount
@@ -95,7 +95,7 @@ class WalletApi(Client):
 
     def withdrawalList(self, coin, startTime, endTime, pageNo='1', pageSize='20'):
         '''
-        withdrawal list
+        ### Withdrawal list
         :return:
         '''
         params = {}
@@ -111,7 +111,7 @@ class WalletApi(Client):
 
     def depositList(self, coin, startTime, endTime, pageNo='1', pageSize='20'):
         '''
-        deposit list
+        ### Deposit list
         :return:
         '''
         params = {}

@@ -8,14 +8,14 @@ class AccountApi(Client):
 
     def info(self):
         '''
-        get broker info
+        ### get broker info
         :return:
         '''
         return self._request_without_params(GET, BROKER_ACCOUNT_V1_URL + '/info')
 
     def sub_create(self, subName, remark):
         '''
-        broker create sub account
+        ### broker create sub account
         :return:
         '''
         params = {}
@@ -28,7 +28,7 @@ class AccountApi(Client):
 
     def sub_list(self, pageSize, lastEndId, status):
         '''
-        get sub info list
+        ### get sub info list
         :return:
         '''
         params = {}
@@ -41,7 +41,7 @@ class AccountApi(Client):
 
     def sub_modify(self, subUid, perm, status):
         '''
-        modify sub info list
+        ### modify sub info list
         :return:
         '''
         params = {}
@@ -55,7 +55,7 @@ class AccountApi(Client):
 
     def sub_modify_email(self, subUid, subEmail):
         '''
-        modify sub email
+        ### modify sub email
         :return:
         '''
         params = {}
@@ -68,7 +68,7 @@ class AccountApi(Client):
 
     def sub_spot_assets(self, subUid):
         '''
-        get sub spot assets
+        ### get sub spot assets
         :return:
         '''
         params = {}
@@ -80,7 +80,7 @@ class AccountApi(Client):
 
     def sub_future_assets(self, subUid):
         '''
-        get sub future assets
+        ### get sub future assets
         :return:
         '''
         params = {}
@@ -92,7 +92,7 @@ class AccountApi(Client):
 
     def sub_address(self, subUid, subEmail):
         '''
-        get sub deposit address
+        ### get sub deposit address
         :return:
         '''
         params = {}
@@ -105,7 +105,7 @@ class AccountApi(Client):
 
     def sub_withdrawal(self, subUid, coin, chain, address, amount, tag, clientOid):
         '''
-        sub withdrawal
+        ### sub withdrawal
         :return:
         '''
         params = {}
@@ -123,7 +123,7 @@ class AccountApi(Client):
 
     def sub_auto_transfer(self, subUid, coin, toAccountType):
         '''
-        sub auto transfer 
+        ### sub auto transfer 
         deposit success auto transfer future
         :return:
         '''

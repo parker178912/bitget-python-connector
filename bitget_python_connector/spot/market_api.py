@@ -11,7 +11,7 @@ class MarketApi(Client):
 
     def fills(self, symbol, limit=100):
         '''
-        Get real-time transaction
+        ### Get real-time transaction
         :return:
         '''
         params = {}
@@ -24,7 +24,7 @@ class MarketApi(Client):
 
     def depth(self, symbol, limit='150', type='step0'):
         '''
-        Get depth data
+        ### Get depth data
         Depth Merge Type
         type: step0(default) step1 step2 step3 step4 step5
         :return:
@@ -40,7 +40,7 @@ class MarketApi(Client):
 
     def ticker(self, symbol):
         '''
-        Get ticker information according to the currency pair
+        ### Get ticker information according to the currency pair
         :return:
         '''
         params = {}
@@ -53,14 +53,14 @@ class MarketApi(Client):
 
     def tickers(self):
         '''
-        Get all transaction pair ticker information
+        ### Get all transaction pair ticker information
         :return:
         '''
         return self._request_without_params(GET, SPOT_MARKET_V1_URL + '/tickers')
 
     def candles(self, symbol, period, after='', before='', limit=100):
         '''
-        Obtain K line information
+        ### Obtain K line information
         params
         
         period: 1min, 5min, 15min, 30min, 1h,4h,12h, 1day, 1week

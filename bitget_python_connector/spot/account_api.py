@@ -11,7 +11,7 @@ class AccountApi(Client):
 
     def assets(self, coin=''):
         '''
-        Obtain all asset currency information of the user
+        ### Obtain all asset currency information of the user
         :return:
         '''
         params = {}
@@ -21,8 +21,7 @@ class AccountApi(Client):
 
     def bills(self, coinId='', groupType='', bizType='', after='', before='', limit=100):
         '''
-        Obtain all asset currency information of the user
-        
+        ### Obtain all asset currency information of the user
         groupType: Deposit, withdraw, transaction, transfer, other
         bizType：Disposit, withdraw, buy, sell, transfer in, transfer out
         after: Pass in billId, the data before this billId
@@ -48,7 +47,7 @@ class AccountApi(Client):
 
     def transfer_records(self, coinId='', fromType='', after='', before='', limit=100):
         '''
-        query transfer records
+        ### Query transfer records
         fromType: exchange(spot)   USD_MIX(coin future) USDT_MIX(usdt future)
         :return:
         '''

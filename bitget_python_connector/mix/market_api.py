@@ -8,23 +8,23 @@ class MarketApi(Client):
     def __init__(self, api_key, api_secret_key, passphrase, use_server_time=False, first=False):
         Client.__init__(self, api_key, api_secret_key, passphrase, use_server_time, first)
 
-    '''
-    Get contract list
-    productType: Umcbl (USDT professional contract) dmcbl (mixed contract) sumcbl (USDT professional contract simulation disk) sdmcbl (mixed contract simulation disk)
-    :return:
-    '''
     def contracts(self, productType):
+        '''
+        ### Get contract list
+        productType: Umcbl (USDT professional contract) dmcbl (mixed contract) sumcbl (USDT professional contract simulation disk) sdmcbl (mixed contract simulation disk)
+        :return:
+        '''
         params = {}
         if productType:
             params['productType'] = productType
         return self._request_with_params(GET, MIX_MARKET_V1_URL + '/contracts', params)
 
-    '''
-    Get depth data
-    symbol：Contract transaction pair
-    :return:
-    '''
     def depth(self, symbol, limit='150'):
+        '''
+        ### Get depth data
+        symbol：Contract transaction pair
+        :return:
+        '''
         params = {}
         if symbol and limit and type:
             params["symbol"] = symbol
@@ -33,12 +33,12 @@ class MarketApi(Client):
         else:
             return "pls check args"
 
-    '''
-    Get ticker information according to the currency pair
-    symbol：Contract transaction pair
-    :return:
-    '''
     def ticker(self, symbol):
+        '''
+        ### Get ticker information according to the currency pair
+        symbol：Contract transaction pair
+        :return:
+        '''
         params = {}
         if symbol:
             params["symbol"] = symbol
@@ -46,23 +46,23 @@ class MarketApi(Client):
         else:
             return "pls check args"
 
-    '''
-    Get all ticket information
-    productType: Umcbl (USDT professional contract) dmcbl (mixed contract) sumcbl (USDT professional contract simulation disk) sdmcbl (mixed contract simulation disk)
-    :return:
-    '''
     def tickers(self,productType):
+        '''
+        ### Get all ticket information
+        productType: Umcbl (USDT professional contract) dmcbl (mixed contract) sumcbl (USDT professional contract simulation disk) sdmcbl (mixed contract simulation disk)
+        :return:
+        '''
         params = {}
         if productType:
             params['productType'] = productType
         return self._request_with_params(GET, MIX_MARKET_V1_URL + '/tickers', params)
 
-    '''
-    Get real-time transaction
-    symbol：Contract transaction pair
-    :return:
-    '''
     def fills(self, symbol, limit=100):
+        '''
+        ### Get real-time transaction
+        symbol：Contract transaction pair
+        :return:
+        '''
         params = {}
         if symbol and limit:
             params["symbol"] = symbol
@@ -71,15 +71,15 @@ class MarketApi(Client):
         else:
             return "pls check args"
 
-    '''
-    Obtain K line information
-    params
-    period: 60, 300, 900, 1800, 3600,14400,43200, 86400, 604800
-    startTime: start time
-    endTime: end time
-    :return:
-    '''
     def candles(self, symbol, granularity, startTime='', endTime='',limit=''):
+        '''
+        ### Obtain K line information
+        params
+        period: 60, 300, 900, 1800, 3600,14400,43200, 86400, 604800
+        startTime: start time
+        endTime: end time
+        :return:
+        '''
         params = {}
         if symbol and granularity:
             params["symbol"] = symbol
@@ -91,12 +91,12 @@ class MarketApi(Client):
         else:
             return "pls check args"
 
-    '''
-    Currency index price
-    symbol：Contract transaction pair
-    :return:
-    '''
     def index(self, symbol):
+        '''
+        ### Currency index price
+        symbol：Contract transaction pair
+        :return:
+        '''
         params = {}
         if symbol:
             params["symbol"] = symbol
@@ -104,12 +104,12 @@ class MarketApi(Client):
         else:
             return "pls check args"
 
-    '''
-    Next settlement time
-    symbol：Contract transaction pair
-    :return:
-    '''
     def funding_time(self, symbol):
+        '''
+        ### Next settlement time
+        symbol：Contract transaction pair
+        :return:
+        '''
         params = {}
         if symbol:
             params["symbol"] = symbol
@@ -117,12 +117,12 @@ class MarketApi(Client):
         else:
             return "pls check args"
 
-    '''
-    Contract Mark Price
-    symbol：Contract transaction pair
-    :return:
-    '''
     def market_price(self, symbol):
+        '''
+        ### Contract Mark Price
+        symbol：Contract transaction pair
+        :return:
+        '''
         params = {}
         if symbol:
             params["symbol"] = symbol
@@ -130,15 +130,15 @@ class MarketApi(Client):
         else:
             return "pls check args"
 
-    '''
-    Historical fund rate
-    symbol：Contract transaction pair
-    pageSize: Number of queries
-    pageNo: Number of query pages
-    nextPage: Whether to query the next page
-    :return:F
-    '''
     def history_fund_rate(self, symbol, pageSize=20, pageNo=1, nextPage=False):
+        '''
+        ### Historical fund rate
+        symbol：Contract transaction pair
+        pageSize: Number of queries
+        pageNo: Number of query pages
+        nextPage: Whether to query the next page
+        :return:F
+        '''
         params = {}
         if symbol:
             params["symbol"] = symbol
@@ -149,12 +149,12 @@ class MarketApi(Client):
         else:
             return "pls check args"
 
-    '''
-    Current fund rate
-    symbol：Contract transaction pair
-    :return:F
-    '''
     def current_fund_rate(self, symbol):
+        '''
+        ### Current fund rate
+        symbol：Contract transaction pair
+        :return:F
+        '''
         params = {}
         if symbol:
             params["symbol"] = symbol
@@ -162,12 +162,12 @@ class MarketApi(Client):
         else:
             return "pls check args"
 
-    '''
-    Obtain the total position of the platform
-    symbol：Contract transaction pair
-    :return:
-    '''
     def open_interest(self, symbol):
+        '''
+        ### Obtain the total position of the platform
+        symbol：Contract transaction pair
+        :return:
+        '''
         params = {}
         if symbol:
             params["symbol"] = symbol
