@@ -6,18 +6,18 @@ class AccountApi(Client):
     def __init__(self, api_key, api_secret_key, passphrase, use_server_time=False, first=False):
         Client.__init__(self, api_key, api_secret_key, passphrase, use_server_time, first)
 
-    '''
-    get broker info
-    :return:
-    '''
     def info(self):
+        '''
+        get broker info
+        :return:
+        '''
         return self._request_without_params(GET, BROKER_ACCOUNT_V1_URL + '/info')
 
-    '''
-    broker create sub account
-    :return:
-    '''
     def sub_create(self, subName, remark):
+        '''
+        broker create sub account
+        :return:
+        '''
         params = {}
         if subName:
             params["subName"] = subName
@@ -26,11 +26,11 @@ class AccountApi(Client):
         else:
             return "pls check args "
 
-    '''
-    get sub info list
-    :return:
-    '''
     def sub_list(self, pageSize, lastEndId, status):
+        '''
+        get sub info list
+        :return:
+        '''
         params = {}
         params["pageSize"] = pageSize
         params["lastEndId"] = lastEndId
@@ -38,11 +38,12 @@ class AccountApi(Client):
         return self._request_with_params(GET, BROKER_ACCOUNT_V1_URL + '/sub-list', params)
         return "pls check args"
 
-    '''
-    modify sub info list
-    :return:
-    '''
+
     def sub_modify(self, subUid, perm, status):
+        '''
+        modify sub info list
+        :return:
+        '''
         params = {}
         if subUid and perm and status:
             params["subUid"] = subUid
@@ -52,11 +53,11 @@ class AccountApi(Client):
         else:
             return "pls check args "
 
-    '''
-    modify sub email
-    :return:
-    '''
     def sub_modify_email(self, subUid, subEmail):
+        '''
+        modify sub email
+        :return:
+        '''
         params = {}
         if subUid and subEmail:
             params["subUid"] = subUid
@@ -65,11 +66,11 @@ class AccountApi(Client):
         else:
             return "pls check args "
 
-    '''
-    get sub spot assets
-    :return:
-    '''
     def sub_spot_assets(self, subUid):
+        '''
+        get sub spot assets
+        :return:
+        '''
         params = {}
         if subUid :
             params["subUid"] = subUid
@@ -77,11 +78,11 @@ class AccountApi(Client):
         else:
             return "pls check args "
 
-    '''
-    get sub future assets
-    :return:
-    '''
     def sub_future_assets(self, subUid):
+        '''
+        get sub future assets
+        :return:
+        '''
         params = {}
         if subUid:
             params["subUid"] = subUid
@@ -89,11 +90,11 @@ class AccountApi(Client):
         else:
             return "pls check args "
 
-    '''
-    get sub deposit address
-    :return:
-    '''
     def sub_address(self, subUid, subEmail):
+        '''
+        get sub deposit address
+        :return:
+        '''
         params = {}
         if subUid and subEmail:
             params["subUid"] = subUid
@@ -102,11 +103,11 @@ class AccountApi(Client):
         else:
             return "pls check args "
 
-    '''
-    sub withdrawal
-    :return:
-    '''
     def sub_withdrawal(self, subUid, coin, chain, address, amount, tag, clientOid):
+        '''
+        sub withdrawal
+        :return:
+        '''
         params = {}
         if subUid and coin and chain and address and amount:
             params["subUid"] = subUid
@@ -120,12 +121,12 @@ class AccountApi(Client):
         else:
             return "pls check args "
 
-    '''
-    sub auto transfer 
-    deposit success auto transfer future
-    :return:
-    '''
     def sub_auto_transfer(self, subUid, coin, toAccountType):
+        '''
+        sub auto transfer 
+        deposit success auto transfer future
+        :return:
+        '''
         params = {}
         if subUid and coin and toAccountType:
             params["subUid"] = subUid

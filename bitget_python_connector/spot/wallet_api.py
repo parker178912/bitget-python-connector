@@ -9,15 +9,15 @@ class WalletApi(Client):
     def __init__(self, api_key, api_secret_key, passphrase, use_server_time=False, first=False):
         Client.__init__(self, api_key, api_secret_key, passphrase, use_server_time, first)
 
-    '''
-    inner transfer 
-    fromType： spot, mix_usdt, mix_usd
-    toType: spot, mix_usdt, mix_usd
-    amount: transfer amount
-    coin: crypto currency
-   :return:
-    '''
     def transfer(self, fromType, toType, amount, coin):
+        '''
+        inner transfer 
+        fromType： spot, mix_usdt, mix_usd
+        toType: spot, mix_usdt, mix_usd
+        amount: transfer amount
+        coin: crypto currency
+        :return:
+        '''
         params = {}
         if fromType and toType and amount and coin :
             params["fromType"] = fromType
@@ -28,13 +28,13 @@ class WalletApi(Client):
         else:
             return "pls check args "
 
-    '''
-    GET deposit address
-    coin： btc usdt
-    chain: trc20  erc20
-    :return:
-    '''
     def depositAddress(self, coin, chain):
+        '''
+        GET deposit address
+        coin： btc usdt
+        chain: trc20  erc20
+        :return:
+        '''
         params = {}
         if coin:
             params["coin"] = coin
@@ -43,19 +43,19 @@ class WalletApi(Client):
         else:
             return "pls check args "
 
-    '''
-    withdrawal
-    coin： btc usdt
-    address: withdrawal address
-    tag: exit? 
-    chain: trc20  erc20
-    amount: withdrawal amount
-    ip: required 
-    remark: 
-    clientOid:
-    :return:
-    '''
     def withdrawal(self, coin, address, chain, amount, remark, clientOid=None,tag=None):
+        '''
+        withdrawal
+        coin： btc usdt
+        address: withdrawal address
+        tag: exit? 
+        chain: trc20  erc20
+        amount: withdrawal amount
+        ip: required 
+        remark: 
+        clientOid:
+        :return:
+        '''
         params = {}
         if coin:
             params["coin"] = coin
@@ -72,16 +72,16 @@ class WalletApi(Client):
         else:
             return "pls check args "
 
-    '''
-    withdrawalInner
-    coin： btc usdt
-    toUid: 
-    amount: withdrawal amount
-    ip: required 
-    clientOid:
-    :return:
-    '''
     def withdrawalInner(self, coin, toUid, amount, clientOid):
+        '''
+        withdrawalInner
+        coin： btc usdt
+        toUid: 
+        amount: withdrawal amount
+        ip: required 
+        clientOid:
+        :return:
+        '''
         params = {}
         if coin:
             params["coin"] = coin
@@ -93,11 +93,11 @@ class WalletApi(Client):
         else:
             return "pls check args "
 
-    '''
-    withdrawal list
-    :return:
-    '''
     def withdrawalList(self, coin, startTime, endTime, pageNo='1', pageSize='20'):
+        '''
+        withdrawal list
+        :return:
+        '''
         params = {}
         if coin:
             params["coin"] = coin
@@ -109,11 +109,11 @@ class WalletApi(Client):
         else:
             return "pls check args "
 
-    '''
-    deposit list
-    :return:
-    '''
     def depositList(self, coin, startTime, endTime, pageNo='1', pageSize='20'):
+        '''
+        deposit list
+        :return:
+        '''
         params = {}
         if coin:
             params["coin"] = coin
