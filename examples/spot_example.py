@@ -15,7 +15,7 @@ if __name__ == '__main__':
     client = Client(api_key, secret_key, passphrase)
     symbol = 'BTCUSDT_SPBL'
 
-    ## 1. Public API 基礎配置街口
+## 1. Public API 基礎配置街口
     public_config = public.PublicApi(client.API_KEY, client.API_SECRET_KEY, client.PASSPHRASE)
 
     # Obtain server time 获取服务器时间
@@ -30,7 +30,7 @@ if __name__ == '__main__':
     # Obtain all ticker information 获取单个产品信息
     public_config.product(symbol)
 
-    ## 2. Market API 公共行情街口
+## 2. Market API 公共行情街口
     market_config = market.MarketApi(client.API_KEY, client.API_SECRET_KEY, client.PASSPHRASE);
     
     # Get Single Ticker 获取某个Ticker信息
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     # Get Candle Data 获取K线数据
     market_config.candles(symbol, period='1min', after='1624352586', before='1624356186', limit=100)
 
-    ## 3. Account API 帳戶接口
+## 3. Account API 帳戶接口
     account_config = account.AccountApi(client.API_KEY, client.API_SECRET_KEY, client.PASSPHRASE)
 
     # Obtain account assets 获取账户资产
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     # Obtain transaction detail flow 获取账单流水
     account_config.bills()
 
-    ## 3. Order API 訂單接口
+## 4. Order API 訂單接口
     order_config = order.OrderApi(client.API_KEY, client.API_SECRET_KEY, client.PASSPHRASE)
 
     # Place order 下单
@@ -82,7 +82,7 @@ if __name__ == '__main__':
     # Get transaction details 获取成交的历史明细
     order_config.fills(symbol)
 
-    ## 4. Plan API 计划委托接口
+## 5. Plan API 计划委托接口
     plan_config = plan.PlanApi(client.API_KEY, client.API_SECRET_KEY, client.PASSPHRASE)
 
     # Place plan order 下计划委托

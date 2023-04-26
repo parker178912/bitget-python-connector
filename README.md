@@ -3,9 +3,6 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/parker178912/bitget-python-connector/blob/main/LICENSE)
 [![bitget-python-connector Version](https://img.shields.io/pypi/v/bitget-python-connector?logo=pypi)](https://pypi.org/project/bitget-python-connector/)
 [![bitget-python-connector Python Versions](https://img.shields.io/pypi/pyversions/bitget-python-connector?logo=pypi)](https://pypi.org/project/bitget-python-connector/)
-[![bitget-python-connector Downloads Per Day](https://img.shields.io/pypi/dd/bitget-python-connector?logo=pypi)](https://pypi.org/project/bitget-python-connector/)
-[![bitget-python-connector Downloads Per Week](https://img.shields.io/pypi/dw/bitget-python-connector?logo=pypi)](https://pypi.org/project/bitget-python-connector/)
-[![bitget-python-connector Downloads Per Month](https://img.shields.io/pypi/dm/bitget-python-connector?logo=pypi)](https://pypi.org/project/bitget-python-connector/)
 [![Downloads](https://static.pepy.tech/badge/bitget-python-connector)](https://pypi.org/project/bitget-python-connector/)
 
 This is a python package for [Bitget](https://partner.bitget.com/bg/GBMPCQ) API, it including all the API on Bitget official documents, both for the REST and the websocket API.
