@@ -30,7 +30,7 @@ if __name__ == '__main__':
     # Obtain all ticker information 获取单个产品信息
     public_config.product(symbol)
 
-    ## Market API 公共行情街口
+    ## 2. Market API 公共行情街口
     market_config = market.MarketApi(client.API_KEY, client.API_SECRET_KEY, client.PASSPHRASE);
     
     # Get Single Ticker 获取某个Ticker信息
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     # Get Candle Data 获取K线数据
     market_config.candles(symbol, period='1min', after='1624352586', before='1624356186', limit=100)
 
-    ## 2. Account API 帳戶接口
+    ## 3. Account API 帳戶接口
     account_config = account.AccountApi(client.API_KEY, client.API_SECRET_KEY, client.PASSPHRASE)
 
     # Obtain account assets 获取账户资产
@@ -83,7 +83,7 @@ if __name__ == '__main__':
     order_config.fills(symbol)
 
     ## 4. Plan API 计划委托接口
-    plan_config = plan.PlanApi(api_key, secret_key, passphrase, use_server_time=False, first=False)
+    plan_config = plan.PlanApi(client.API_KEY, client.API_SECRET_KEY, client.PASSPHRASE)
 
     # Place plan order 下计划委托
     result = plan_config.placePlan(symbol, side='buy', triggerPrice='22031', executePrice='22031', size='50', triggerType='market_price', orderType='market', timeInForceValue='normal')
