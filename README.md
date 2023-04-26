@@ -20,7 +20,7 @@ This is a python package for [Bitget](https://partner.bitget.com/bg/GBMPCQ) API,
 # Get Started and Documentation 使用及說明
 If you haven't regist a Bitget account, use this link to save 10% on all of your trade fees, and can get rewards up to $5,005.
 * [Register an account with Bitget.](https://partner.bitget.com/bg/GBMPCQ)
-> I am in no way affiliated with Bitget, please it use at your own risk.
+> I am in no way affiliated with Bitget, please  at your own risk.
 ---
 如果您還沒有在 Bitget 註冊帳戶，可以使用以下連結，以享有所有交易費用 10% 的折扣，並有機會獲得高達 $5,005 的獎勵。
 * [請註冊一個 Bitget 帳戶。](https://partner.bitget.com/bg/GBMPCQ)
