@@ -30,9 +30,12 @@ If you haven't regist a Bitget account, use this link to save 10% on all of your
 # Usage 使用
 1. [Create your API KEY, your SECRET KEY and your PASSPHRASE.](https://www.bitget.com/en/support/articles/360038968251-API%20Creation%20Guide)
 2. Check out the examples folder and put your info in it.  
+> [Here](https://github.com/parker178912/bitget-python-connector-with-heroku) are an example for cloud platform, you can check a look for details.
+
 ---
 1. [請創建您的 API KEY、SECRET KEY 和 PASSPHRASE。](https://www.bitget.com/en/support/articles/360038968251-API%20Creation%20Guide)
 2. 並將上述信息填入example資料夾中，您想使用的檔案相對應的變數內。
+> 若你需要使用雲端機台運行你的程式碼，可以查看[這裡](https://github.com/parker178912/bitget-python-connector-with-heroku)的教學。
 
 ## Donation 贊助
 USDT : '0x6427708f8850f0df1385cd371a973067d72d8e76' (BSC)
