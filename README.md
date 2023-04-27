@@ -34,11 +34,14 @@ If you haven't regist a Bitget account, use this link to save 10% on all of your
 1. [請創建您的 API KEY、SECRET KEY 和 PASSPHRASE。](https://www.bitget.com/en/support/articles/360038968251-API%20Creation%20Guide)
 2. 並將上述信息填入example資料夾中，您想使用的檔案相對應的變數內。
 
-## Donation
-Waited
+## Donation 贊助
+USDT : '0x6427708f8850f0df1385cd371a973067d72d8e76' (BSC)
+ETH : '0x6427708f8850f0df1385cd371a973067d72d8e76' (ETH, BSC)
+BTC : '1BZcLQZTrsK91GaHz8FvE8j7jkoaixo4bN' (BTC), '0x6427708f8850f0df1385cd371a973067d72d8e76' (BSC)
 
-## Release Notes
-Waited
+## Release Notes 開發版本
+
+* 0.0.7 the first version of totally update.
 
 ## Resources
 * [Bitget API docs](https://bitgetlimited.github.io/apidoc/en/mix/#welcome)
