@@ -36,7 +36,9 @@ If you haven't regist a Bitget account, use this link to save 10% on all of your
 
 ## Donation 贊助
 USDT : '0x6427708f8850f0df1385cd371a973067d72d8e76' (BSC)
+
 ETH : '0x6427708f8850f0df1385cd371a973067d72d8e76' (ETH, BSC)
+
 BTC : '1BZcLQZTrsK91GaHz8FvE8j7jkoaixo4bN' (BTC), '0x6427708f8850f0df1385cd371a973067d72d8e76' (BSC)
 
 ## Release Notes 開發版本
