@@ -14,7 +14,7 @@ if __name__ == '__main__':
     passphrase = "YOUR_PASSPHRASE"
 
     client = Client(api_key, secret_key, passphrase)
-    symbol = 'BTCUSDT_SPBL'
+    symbol = 'BTCUSDT_UMCBL'
 
 ## 1. Market API 公共行情街口
     market_config = market.MarketApi(client.API_KEY, client.API_SECRET_KEY, client.PASSPHRASE)
