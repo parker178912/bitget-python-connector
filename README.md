@@ -42,6 +42,8 @@ BTC : '1BZcLQZTrsK91GaHz8FvE8j7jkoaixo4bN' (BTC), '0x6427708f8850f0df1385cd371a9
 ## Release Notes 開發版本
 
 * 0.0.7 the first version of totally update.
+---
+* 0.0.7 完整上傳版本
 
 ## Resources
 * [Bitget API docs](https://bitgetlimited.github.io/apidoc/en/mix/#welcome)
